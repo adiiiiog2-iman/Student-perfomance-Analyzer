@@ -98,4 +98,67 @@ Karan,40,35,50
 
 ## Test Cases
 
-### Test Case 1: Normal
+### Test Case 1: Normal Input
+
+**Input:** `students.csv`, menu option 1 (Result)
+
+**Output:**
+```
+Aman | 240 | 80.00% | B
+Riya | 195 | 65.00% | C
+Karan | 125 | 41.67% | D
+```
+
+![Test Case 1](TEST_CASE_1.png)
+
+### Test Case 2: Boundary / Minimum Input
+
+**Input:** `test2_boundary.csv`, menu option 1 (Result)
+
+**Output:**
+```
+Neha | 300 | 100.00% | A
+Ravi | 0 | 0.00% | F
+```
+
+![Test Case 2](TEST_CASE_2.png)
+
+### Test Case 3: Invalid Input
+
+**Input:** `test3_invalid.csv` (contains `Amit,85,abc,70`)
+
+**Output:**
+```
+Invalid marks for Amit in Physics: 'abc'. Row skipped.
+No valid student data found.
+```
+
+![Test Case 3](TEST_CASE_3.png)
+
+### Test Case 4: Different Valid Scenario
+
+**Input:** `students.csv`, menu option 2 (Statistics)
+
+**Output:**
+```
+Mean %: 62.22 | Median %: 65.00 | Std Dev: 15.77
+Topper: Aman (80.00%)
+Subject averages: Maths 60.00, Physics 56.67, Chemistry 70.00
+Bar chart displayed
+```
+
+![Test Case 4](TEST_CASE_4.png)
+
+**Bar chart (subject-wise average marks):**
+
+![Bar Chart](TEST_CASE_4_GRAPH.png)
+
+**Histogram (student percentages):**
+
+![Histogram](TEST_CASE_4_GRAPH_2.png)
+
+## Conclusion
+
+The project reads student marks from a CSV file, finds total, percentage and grade, handles wrong input, gives the class statistics and shows the results with charts. All 4 test cases give the same output as expected.
+
+**Future scope:** add more subjects, save the results to a file, and add a pie chart and more graphs.
